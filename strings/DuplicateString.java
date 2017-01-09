@@ -13,7 +13,7 @@ public class DuplicateString{
 			return;
 		}
 
-		/*Map<Character, Integer> maps = new HashMap<>();
+		Map<Character, Integer> maps = new HashMap<>();
 		int count = 0;
 		char[] a = s.toLowerCase().toCharArray();
 
@@ -34,8 +34,8 @@ public class DuplicateString{
 			if(maps.get(c)>1) {
 				System.out.println("Values: "+c+" count: "+maps.get(c));
 			}
-		}*/
-        s = s.toLowerCase();
+		}
+        /*s = s.toLowerCase();
 		for (int i = 0; i<s.length();i++) {
 			int count = 1;
 			for (int j=i+1;j<s.length();j++) {
@@ -47,6 +47,6 @@ public class DuplicateString{
 			if(count >1) {
 				System.out.println(s.charAt(i)+" count is: "+ count);
 			}
-		}
+		}*/
 	}
 }
