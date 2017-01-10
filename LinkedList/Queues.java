@@ -99,6 +99,7 @@ public class Queues<T>  {
 		q.enqueue(100);
     q.enqueue(200);
     q.enqueue(78);
+    q.enqueue(890);
 		// System.out.println(q.peek());
   //   System.out.println("Count: "+q.count);
   //   System.out.println("Pop: "+q.dequeue());
