@@ -1,3 +1,6 @@
+
+import java.util.*;
+
 public class NextGreaterElement {
 	
 
@@ -5,11 +8,11 @@ public class NextGreaterElement {
 
 		int[] arrays = new int[]{98,54,12,20};
 
-		int[] result = findNextElement(arrays);
+		/*int[] result = findNextElement(arrays);
 		for (int i: result) {
 			System.out.println(i);
-		}
-
+		}*/
+		findNextElementUsingstacks(arrays);
 
 	}
 
@@ -38,6 +41,27 @@ public class NextGreaterElement {
 	    }
 
 	    return result;
+	}
+
+	public static void findNextElementUsingstacks(int[] arrays) {
+		 if (arrays.length == 0 || arrays == null) {
+	    	return;
+	    }
+
+	    int length = arrays.length;
+	    int[] result = new int[length];
+	    Stack<Integer> stack = new Stack<>();
+
+	    for (int i=0;i<length;i++) {
+	    	while(!stack.isEmpty() && arrays[i]>stack.peek()) {
+	    		System.out.println("The next great element of "+stack.pop() + " is "+arrays[i]);
+	    	}
+	    	stack.push(arrays[i]);
+	    }
+
+	    while(!stack.isEmpty()) {
+	    	System.out.println("The next great element of "+stack.pop() + " is "+ -1);
+	    }
 	}
 
 
